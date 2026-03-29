@@ -14,8 +14,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: calc(var(--header-height) + var(--padding)) var(--padding)
-    var(--padding);
+  padding: calc(var(--header-height) + var(--padding)) var(--padding) var(--padding);
   inset: 0;
   padding: var(--header-height) var(--padding);
 }
@@ -59,7 +58,7 @@ body {
   align-items: center;
   flex-direction: row;
   height: var(--header-height);
-  gap: calc(var(--padding) * 0.5);
+  gap: calc(var(--padding) * .5);
 }
 
 .controls button {
@@ -79,10 +78,9 @@ body {
 .suvo {
   position: fixed;
   bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%); /* this centers it */
+  left: 15px;
   z-index: 9999;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -93,14 +91,14 @@ body {
   padding: 6px 14px;
   border-radius: 12px;
   color: #ccefff;
-
+  
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-
+  
   border: 1px solid rgba(0, 234, 255, 0.2);
-
+  
   /* Soft glow */
-  box-shadow:
+  box-shadow: 
     0 0 8px rgba(0, 234, 255, 0.2),
     inset 0 0 6px rgba(0, 234, 255, 0.1);
 }
@@ -110,8 +108,8 @@ body {
   color: #00eaff;
   text-decoration: none;
   font-weight: 500;
-
-  text-shadow:
+  
+  text-shadow: 
     0 0 5px #00eaff,
     0 0 10px #00eaff;
 }
@@ -122,7 +120,7 @@ body {
 }
 
 .suvo:hover span {
-  box-shadow:
+  box-shadow: 
     0 0 12px rgba(0, 234, 255, 0.5),
     0 0 25px rgba(0, 234, 255, 0.3),
     inset 0 0 10px rgba(0, 234, 255, 0.2);
@@ -134,15 +132,9 @@ body {
 }
 
 @keyframes floatGlow {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
+  100% { transform: translateY(0px); }
 }
 .element {
   overflow: hidden;
@@ -159,8 +151,8 @@ body {
   color: var(--color-1);
   width: var(--w);
   height: var(--h);
-  border-radius: 0.25rem;
-  padding: 0.25rem;
+  border-radius: .25rem;
+  padding: .25rem;
   transform-style: preserve-3d;
   z-index: 8;
   cursor: pointer;
@@ -186,9 +178,9 @@ button.element:hover {
   display: none;
   transform-style: preserve-3d;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: .25rem;
   width: 100%;
-  font-size: 0.625rem;
+  font-size: .625rem;
   text-transform: none;
   color: var(--color-1);
   justify-self: flex-end;
@@ -202,8 +194,8 @@ button.element:hover {
 
 .element-symbol {
   transform-style: preserve-3d;
-  margin-top: -0.1rem;
-  margin-bottom: 0.2rem;
+  margin-top: -.1rem;
+  margin-bottom: .2rem;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -217,7 +209,7 @@ button.element:hover {
 
 .element-title {
   transform-style: preserve-3d;
-  font-size: 0.5rem;
+  font-size: .5rem;
   font-weight: 700;
   text-align: center;
 }
@@ -230,7 +222,7 @@ button.element:hover {
 
 .element-number {
   transform-style: preserve-3d;
-  font-size: 0.5rem;
+  font-size: .5rem;
   text-align: right;
   align-self: flex-end;
 }
@@ -248,32 +240,30 @@ button.element:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: calc(var(--w) * -0.5);
-  margin-top: calc(var(--h) * -0.5);
+  margin-left: calc(var(--w) * -.5);
+  margin-top: calc(var(--h) * -.5);
 }
 
 #scene-content[data-layout="table"] .element.is-expanded {
   left: -1.625rem;
   top: -1.25rem;
-  margin-left: calc(var(--w) * -0.25);
-  margin-top: calc(var(--h) * -0.25);
-  margin-right: calc(var(--w) * -0.5);
-  margin-bottom: calc(var(--h) * -0.5);
+  margin-left: calc(var(--w) * -.25);
+  margin-top: calc(var(--h) * -.25);
+  margin-right: calc(var(--w) * -.5);
+  margin-bottom: calc(var(--h) * -.5);
 }
 
 @font-face {
-  font-family: "IoskeleyMono";
-  src: url("https://assets.codepen.io/1137/IoskeleyMono-Regular.woff2")
-    format("woff2");
+  font-family: 'IoskeleyMono';
+  src: url('https://assets.codepen.io/1137/IoskeleyMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "IoskeleyMono";
-  src: url("https://assets.codepen.io/1137/IoskeleyMono-Bold.woff2")
-    format("woff2");
+  font-family: 'IoskeleyMono';
+  src: url('https://assets.codepen.io/1137/IoskeleyMono-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -288,7 +278,7 @@ button.element:hover {
     /* Ek deep dark sky blue gradient jo center se dark obsidian ki taraf jata hai */
     background: radial-gradient(circle at center, #1b2a47 0%, #050b14 100%);
     color: var(--fg-1);
-    font-family: "IoskeleyMono", monospace, sans-serif;
+    font-family: 'IoskeleyMono', monospace, sans-serif;
     height: 100%;
     /* Gradient ko poore page par stretch karne ke liye */
     margin: 0;
@@ -415,7 +405,7 @@ button.element:hover {
   --fg-3: #96918f;
   --fg-4: #65655e;
   --fg-5: #33332e;
-  --input-border-radius: 0.25rem;
+  --input-border-radius: .25rem;
   --br: 1rem;
   --padding: 1rem;
   --border-width: 1px;
@@ -564,7 +554,7 @@ html,
 body {
   background-color: var(--bg-1);
   color: var(--fg-1);
-  font-family: "IoskeleyMono", monospace, sans-serif;
+  font-family: 'IoskeleyMono', monospace, sans-serif;
 }
 
 .br {
@@ -572,11 +562,11 @@ body {
 }
 
 .br .br {
-  border-radius: calc(var(--br) * 0.5);
+  border-radius: calc(var(--br) * .5);
 }
 
 .br .br .br {
-  border-radius: calc(var(--br) * 0.25);
+  border-radius: calc(var(--br) * .25);
 }
 
 .black {
@@ -609,7 +599,7 @@ body {
 
 .grid {
   --one-cell: 100px;
-  --border-color: rgba(255, 255, 255, 0.75);
+  --border-color: rgba(255, 255, 255, .75);
   flex-grow: 1;
   position: relative;
   width: 100%;
@@ -627,17 +617,15 @@ body {
   width: 100%;
   height: 100%;
   background:
-    linear-gradient(-90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(-90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(-90deg, rgba(255, 255, 255, .05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+    linear-gradient(-90deg, rgba(255, 255, 255, .04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px);
   background-size:
     calc(var(--one-cell) / 10) calc(var(--one-cell) / 10),
     calc(var(--one-cell) / 10) calc(var(--one-cell) / 10),
-    var(--one-cell) var(--one-cell),
-    var(--one-cell) var(--one-cell),
-    var(--one-cell) var(--one-cell),
-    var(--one-cell) var(--one-cell);
+    var(--one-cell) var(--one-cell), var(--one-cell) var(--one-cell),
+    var(--one-cell) var(--one-cell), var(--one-cell) var(--one-cell);
   background-position: 0 -1px;
   backface-visibility: hidden;
 }
@@ -670,7 +658,7 @@ body {
   padding-bottom: 1ch;
   font-family: ui-monospace, monospace;
   white-space: pre;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
 }
 
 @keyframes reveal {
@@ -679,7 +667,7 @@ body {
   }
 
   to {
-    opacity: 0.4;
+    opacity: .4;
   }
 }
 
@@ -692,7 +680,7 @@ body {
 button,
 select {
   width: 100%;
-  flex-shrink: 0.5;
+  flex-shrink: .5;
   border: none;
   background-color: var(--white-1);
   border-radius: var(--input-border-radius);
@@ -702,7 +690,7 @@ select {
 }
 
 button {
-  padding: 0 0.75rem;
+  padding: 0 .75rem;
 }
 
 select:disabled,
@@ -718,7 +706,7 @@ button:not(:disabled):hover {
 
 legend {
   display: flex;
-  gap: 0.5rem;
+  gap: .5rem;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -728,7 +716,7 @@ legend {
 
 label {
   display: flex;
-  gap: 0.5rem;
+  gap: .5rem;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -750,15 +738,15 @@ fieldset.vertical {
   align-items: flex-start;
 }
 
-fieldset > * {
+fieldset>* {
   border-radius: 0;
 }
 
-fieldset > *:first-child {
+fieldset>*:first-child {
   border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
 }
 
-fieldset > *:last-child {
+fieldset>*:last-child {
   border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
 }
 

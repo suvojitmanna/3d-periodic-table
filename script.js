@@ -1286,4 +1286,20 @@ transformLayout.random();
 utils.set(cards, { opacity: 0 });
 elementsLayout.update(() => transformLayout.table(), {
   delay: stagger([0, 750], { from: "random" }),
+});const buttons = document.querySelectorAll(".toggle");
+const scene = document.getElementById("scene-content");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    
+    // remove active from all
+    buttons.forEach((b) => b.classList.remove("is-active"));
+
+    // add active to clicked
+    btn.classList.add("is-active");
+
+    // change layout
+    const layout = btn.id;
+    scene.setAttribute("data-layout", layout);
+  });
 });
