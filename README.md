@@ -23,7 +23,8 @@ Scroll to zoom
 📱 Responsive Design
 Works across all devices
 🖼️ Preview
-<p align="center"> <img src="https://3d-periodic-table-ten.vercel.app/preview.png" width="100%" alt="preview"/> </p>
+<img width="1919" height="905" alt="image" src="https://github.com/user-attachments/assets/419fec1c-ebf4-4641-b8d6-9f31ba12722b" />
+
 🛠️ Tech Stack
 🌐 HTML5
 🎨 CSS3 (Animations + Effects)
