@@ -79,7 +79,8 @@ body {
 .suvo {
   position: fixed;
   bottom: 15px;
-  left: 15px;
+  left: 50%;
+  transform: translateX(-50%); /* this centers it */
   z-index: 9999;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
